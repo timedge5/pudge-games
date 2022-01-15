@@ -56,7 +56,7 @@ export const Yahtzee = () => {
                     <div className="flex" key={i}>
                         <p className="p-1 mr-2">{label}</p>
                         <input type="number" className="p-1 w-1/2 mx-auto input" onChange={(e) => handleUpperInput(e, i)} />
-                    </div>
+                    </div> 
                 ))}
             </div>
             <div className="flex w-3/4 mx-auto mt-2 pt-2 border-t-2 border-gray-400">
@@ -65,11 +65,11 @@ export const Yahtzee = () => {
             </div>
             <div className="flex mx-auto w-3/4 my-1">
                 <p className="w-1/2">Bonus</p>
-                <p className="px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal > 34 ? 35 : 0}</p>
+                <p className="px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal > 62 ? 35 : 0}</p>
             </div>
             <div className="flex mx-auto w-3/4 pb-2 mb-2 border-b-2 border-gray-400">
                 <p className="w-1/2">Upper Total</p>
-                <p className="px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal > 34 ? (upperSubtotal + 35) : upperSubtotal}</p>
+                <p className="px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal > 62 ? (upperSubtotal + 35) : upperSubtotal}</p>
             </div>
             <div className="mx-auto w-3/4">
                 {lowerLabels.map((label, i) => (
@@ -85,7 +85,7 @@ export const Yahtzee = () => {
             </div>
             <div className="flex mx-auto w-3/4">
                 <p className="w-1/2">Total</p>
-                <p className="ml-2 px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal + lowerSubtotal}</p>
+                <p className="ml-2 px-2 bg-gray-100 border-2 border-bg-400">{upperSubtotal > 62 ? ((upperSubtotal + 35) + lowerSubtotal) : (upperSubtotal + lowerSubtotal)}</p>
             </div>
             <button className="p-1 uppercase text-xs bg-gray-200 border-2 border-gray-400 absolute top-2 right-2 hover:bg-gray-100" onClick={() => handleClear()}>clear</button>
         </div>
