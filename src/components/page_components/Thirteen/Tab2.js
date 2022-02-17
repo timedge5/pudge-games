@@ -70,7 +70,7 @@ export const Tab2 = (props) => {
     return (
         <div className="flex flex-col p-4 h-full">
             <h1 className="uppercase text-center text-2xl mx-auto mb-4">Round {round + 1}</h1>
-            <img alt="Image card" className="w-1/3 mx-auto md:w-1/6 lg:w-1/12" src={reverse ? `/resources/${round - ((round - 10) * (2))}.png` : `/resources/${round}.png`} />
+            <img alt={`${round} image card`} className="w-1/3 mx-auto md:w-1/6 lg:w-1/12" src={reverse ? `/resources/${round - ((round - 10) * (2))}.png` : `/resources/${round}.png`} />
             <div className="grid grid-cols-2 gap-4 my-12 overflow-y-auto h-full lg:grid-cols-4 lg:gap-2 lg:w-3/4 lg:mx-auto">
                 {/* create array from number of players, and map out component for each player */}
                 {Array.from({ length: players }).map((_item, index) => (
