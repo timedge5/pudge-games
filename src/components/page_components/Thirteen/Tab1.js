@@ -28,7 +28,7 @@ export const Tab1 = (props) => {
                 </Switch>
                 <p className="uppercase text-xs mx-2">Full</p>
             </div>
-            <button className="mt-8 py-3 px-6 bg-gray-100 border-2 border-gray-400 hover:bg-gray-200" onClick={() => props.handleStartGame()}>
+            <button className="mt-8 py-3 px-6 uppercase bg-gray-100 hover:bg-gray-200" onClick={() => props.handleStartGame()}>
                 Start
             </button>
         </div>

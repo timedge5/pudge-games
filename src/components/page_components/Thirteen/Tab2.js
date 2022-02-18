@@ -73,7 +73,7 @@ export const Tab2 = (props) => {
 
   return (
     <div className="flex flex-col p-4 h-full">
-      <h1 className="uppercase text-center text-2xl mx-auto mb-4">
+      <h1 className="uppercase text-center text-2xl mx-auto mb-4 text-gray-200">
         Round {round + 1}
       </h1>
       <img
@@ -90,8 +90,10 @@ export const Tab2 = (props) => {
         {Array.from({ length: players }).map((_item, index) => (
           <div className="w-3/4 text-slate-700 mx-auto" key={index}>
             <div className="flex mb-2">
-              <h1 className="uppercase text-xs my-auto">Player {index + 1}</h1>
-              <p className="text-2xl mx-auto">
+              <h1 className="uppercase text-xs my-auto text-gray-200">
+                Player {index + 1}
+              </h1>
+              <p className="text-2xl mx-auto text-gray-200">
                 {playerScoreArray[index].score}
               </p>
             </div>
@@ -112,7 +114,7 @@ export const Tab2 = (props) => {
           Back
         </button>
         <button
-          className="uppercase py-3 px-6 bg-gray-100 border-2 border-gray-300 hover:bg-gray-200"
+          className="uppercase py-3 px-6 bg-gray-100 hover:bg-gray-200"
           onClick={() => handleNext()}
         >
           Next
