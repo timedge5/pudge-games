@@ -8,8 +8,6 @@ export const Tab3 = (props) => {
     a.score > b.score ? 1 : -1
   );
 
-  console.log(sortedPlayerArray);
-
   const handleBackToStart = () => {
     props.changeTab(1);
     props.resetPlayerScoreArray();
@@ -19,9 +17,9 @@ export const Tab3 = (props) => {
     <div className="h-full flex flex-col p-10 text-gray-200">
       <h1 className="mx-auto uppercase text-4xl mb-10">End of Game</h1>
       <h2 className="text-center text-2xl mb-10">
-        Congratulations {playerScoreArray[0].name}! You won with{" "}
-        {playerScoreArray[0].score}{" "}
-        {playerScoreArray[0].score === 1 ? "point" : "points"}.
+        Congratulations {sortedPlayerArray[0].name}! You won with{" "}
+        {sortedPlayerArray[0].score}{" "}
+        {sortedPlayerArray[0].score === 1 ? "point" : "points"}.
       </h2>
       <div className="grid grid-cols-2 gap-2 w-3/4 mx-auto lg:w-5/12">
         {sortedPlayerArray.map((player) => (
