@@ -8,16 +8,6 @@ export const Yahtzee = () => {
 
   // arrays for labels
   const upperLabels = [1, 2, 3, 4, 5, 6];
-  const lowerLabels = [
-    "3 of a kind",
-    "4 of a kind",
-    "Full House",
-    "Small straight",
-    "Large straight",
-    "Yahtzee",
-    "Chance",
-    "Bonus",
-  ];
 
   const handleUpperInput = (e, value) => {
     if (e.target.value === "") {
@@ -64,7 +54,9 @@ export const Yahtzee = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-200 pt-2 relative md:px-32 lg:px-96 md:pt-5">
-      <h1 className="uppercase font-light text-2xl text-center mb-3 md:mb-5">yahtzee</h1>
+      <h1 className="uppercase font-light text-2xl text-center mb-3 md:mb-5">
+        yahtzee
+      </h1>
       <div className="grid grid-cols-2 gap-2 w-3/4 mx-auto mb-2">
         {upperLabels.map((label, i) => (
           <div className="flex" key={i}>
