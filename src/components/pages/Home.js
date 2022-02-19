@@ -21,6 +21,12 @@ export const Home = () => {
       >
         Mario kart
       </Link>
+      <Link
+        to="tictactoe"
+        className="px-3 py-8 bg-white w-1/2 mx-auto my-3 text-center uppercase cursor-pointer md:w-1/6 md:h-24 md:mx-3"
+      >
+        tic tac toe
+      </Link>
     </div>
   );
 };
